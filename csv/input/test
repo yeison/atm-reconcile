@@ -1,0 +1,10 @@
+id, name,amount,date,is_cash,is_atm
+502, cash-one, 25, 2013-02-11, true, false
+501, cash-two, 55, 2013-02-10, true, false
+500, cash-three, 10, 2013-02-09, true, false
+401, atm-one, 80, 2013-02-07, false, true
+400, atm-two, 10, 2013-02-06, false, true
+399, cash-four, 10, 2013-02-05, true, false
+398, cash-five, 100, 2013-02-05, true, false
+397, atm-three, 50, 2013-02-04, false, true,
+395, atm-four, 25, 2013-02-01, false, true
