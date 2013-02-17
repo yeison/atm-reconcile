@@ -15,13 +15,21 @@ public class ReconcileCsv {
         // LinkedList will perform better than ArrayList for our needs
         LinkedList<ReconcilableTransaction> transactions = new LinkedList<ReconcilableTransaction>();
 
-        File file = new File(args[0]);
 
         BufferedReader bufferedReader = null;
         try {
+            File file = null;
+            try {
+                file = new File(args[0]);
+            } catch (ArrayIndexOutOfBoundsException e){
+                throw new FileNotFoundException("Please provide a filename as the first argument.");
+            }
+
+
             bufferedReader = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+
         }
 
         String line;
@@ -69,15 +77,16 @@ public class ReconcileCsv {
 
         while (!atmStack.isEmpty() && !cashStack.isEmpty()){
 
-            // Retrieve the most recent cash transaction
-            CashPurchaseTransaction cashTransaction  = cashStack.pop();
-            // Retrieve the most recent atm transaction
-            AtmWithdrawalTransaction atmTransaction  = atmStack.pop();
-
             ReconciliationTransaction reconciliation = null;
+
+            // Retrieve the most recent cash transaction
+            CashPurchaseTransaction cashTransaction  = cashStack.peek();
+            // Retrieve the most recent atm transaction
+            AtmWithdrawalTransaction atmTransaction  = atmStack.peek();
 
             // Only reconcile if most recent cash transaction is more recent than the most recent atm transaction
             if(cashTransaction.compareTo(atmTransaction) > 0 ){
+
                 // Create reconciliation object and perform reconciliation processing
                 reconciliation =  new ReconciliationTransaction(cashTransaction, atmTransaction);
 
@@ -85,18 +94,20 @@ public class ReconcileCsv {
                 cashTransaction = reconciliation.getCashPurchaseTransaction();
                 atmTransaction  = reconciliation.getAtmWithdrawalTransaction();
 
-                // Push non-consumed transactions back on top of their respective stacks
+                // This is where the magic happens
+                // Pop consumed transactions from the top of their respective stacks
                 // NOTE: If this application were multi-threaded, these stacks would have to be thread-safe
-                if(cashTransaction.getAmount() != 0){
-                    cashStack.push(cashTransaction);
+                if(cashTransaction.getAmount() == 0){
+                    cashStack.pop();
                 }
-                if(atmTransaction.getAmount() != 0){
-                    atmStack.push(atmTransaction);
+                if(atmTransaction.getAmount() == 0){
+                    atmStack.pop();
                 }
 
                 reconciliations.add(reconciliation);
 
             } else {
+                System.out.println("Where Here");
                 // We break if newest atm transaction is more recent than newest cash transaction
                 break;
             }
@@ -110,6 +121,7 @@ public class ReconcileCsv {
             reconciliations.add(reconciliation);
 
         }
+
 
         for(ReconciliationTransaction reconciliation: reconciliations){
             System.out.println(reconciliation);

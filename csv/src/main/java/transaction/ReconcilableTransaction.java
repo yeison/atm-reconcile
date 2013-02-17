@@ -38,6 +38,8 @@ public abstract class ReconcilableTransaction implements Comparable<Reconcilable
         return false;
     }
 
+    /** Getters and Setters **/
+
     public long getId() {
         return id;
     }
