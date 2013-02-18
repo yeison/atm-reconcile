@@ -1,0 +1,6 @@
+target/classes
+*.swp
+target/maven-archiver
+.DS_Store
+output/
+target/archive-tmp/

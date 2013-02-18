@@ -1,0 +1,21 @@
+id, name,amount,date,is_cash,is_atm
+7809, cash-negfour, 150, 2023-02-11, true, false
+7808, cash-negthree, 1045, 2023-02-11, true, false
+7807, cash-negtwo, 45, 2023-02-11, true, false
+7707, cash-negone, 45, 2023-02-11, true, false
+7706, cash-zero, 45, 2013-02-11, true, false
+6401, atm-zero, 80000, 2013-02-07, false, true
+506, cash-singularity, 45, 2013-02-11, true, false
+505, cash-unity, 25, 2013-02-11, true, false
+502, cash-one, 25, 2013-02-11, true, false
+501, cash-two, 55, 2013-02-10, true, false
+500, cash-three, 10, 2013-02-09, true, false
+401, atm-one, 80, 2013-02-07, false, true
+400, atm-two, 10, 2013-02-06, false, true
+399, cash-four, 10, 2013-02-05, true, false
+398, cash-five, 120, 2013-02-05, true, false
+397, atm-three, 50, 2013-02-04, false, true,
+395, atm-four, 25, 2013-02-01, false, true
+394, atm-five, 25, 2013-02-01, false, true
+393, atm-six, 25, 2013-02-01, false, true
+391, cash-fitty, 100, 2012-02-06, true, false

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/atm-reconcile.iml" filepath="$PROJECT_DIR$/atm-reconcile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/csv/csv.iml" filepath="$PROJECT_DIR$/csv/csv.iml" />
     </modules>
   </component>
 </project>
