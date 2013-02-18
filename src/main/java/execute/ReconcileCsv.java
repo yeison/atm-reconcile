@@ -35,7 +35,7 @@ public class ReconcileCsv {
 
             } catch (IOException e){
                 // Alert of input-file error and continue to next file
-                System.err.println(String.format("error: Unable to process file: %s", fileName));
+                System.err.println(String.format("\nError: Unable to process file: %s", fileName));
                 e.printStackTrace();
                 continue;
             }
