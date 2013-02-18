@@ -20,4 +20,4 @@ java -jar atm-reconcile.jar <input-file1.csv> ...
 ```
 
 A list of input files may be provided to the runnable jar.  The program will process the input data and place
-the output into './output'. The names of the output files correspond to the input files.
+the output into './output'. The names of the output files will correspond to the input files.
