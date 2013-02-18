@@ -19,4 +19,5 @@ The executable jar will be generated into the base directory as atm-reconcile.ja
 java -jar atm-reconcile.jar <input-file1.csv> ...
 ```
 
-A list of input files may be provided to the runnable jar.
+A list of input files may be provided to the runnable jar.  The program will process the input data and place
+the output into ./output with names that correspond to the input files.
