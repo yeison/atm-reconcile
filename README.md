@@ -5,6 +5,11 @@ transaction records.  Then it attempts to reconcile the cash transactions
 with appropriate atm transactions.  The output is a list of reconciliation 
 transactions with their corresponding ATM parents.
 
+requirements
+=============
+Java 1.6  
+maven 3.0
+
 execution
 =============
 To run the program, first build the jar using the maven 'package' goal from the project's base directory:
