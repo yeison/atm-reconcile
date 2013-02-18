@@ -5,70 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1673b85c-4bf9-489a-9da2-2819f2436d31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/csv.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/csv/pom.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/assembly.xml" afterPath="$PROJECT_DIR$/assembly.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/allclasses-frame.html" afterPath="$PROJECT_DIR$/doc/allclasses-frame.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/doc/allclasses-noframe.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/constant-values.html" afterPath="$PROJECT_DIR$/doc/constant-values.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/deprecated-list.html" afterPath="$PROJECT_DIR$/doc/deprecated-list.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/exception/MalformedInputException.html" afterPath="$PROJECT_DIR$/doc/exception/MalformedInputException.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/exception/package-frame.html" afterPath="$PROJECT_DIR$/doc/exception/package-frame.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/exception/package-summary.html" afterPath="$PROJECT_DIR$/doc/exception/package-summary.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/exception/package-tree.html" afterPath="$PROJECT_DIR$/doc/exception/package-tree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/execute/ReconcileCsv.html" afterPath="$PROJECT_DIR$/doc/execute/ReconcileCsv.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/execute/package-frame.html" afterPath="$PROJECT_DIR$/doc/execute/package-frame.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/execute/package-summary.html" afterPath="$PROJECT_DIR$/doc/execute/package-summary.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/execute/package-tree.html" afterPath="$PROJECT_DIR$/doc/execute/package-tree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/help-doc.html" afterPath="$PROJECT_DIR$/doc/help-doc.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-1.html" afterPath="$PROJECT_DIR$/doc/index-files/index-1.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-10.html" afterPath="$PROJECT_DIR$/doc/index-files/index-10.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-11.html" afterPath="$PROJECT_DIR$/doc/index-files/index-11.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-2.html" afterPath="$PROJECT_DIR$/doc/index-files/index-2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-3.html" afterPath="$PROJECT_DIR$/doc/index-files/index-3.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-4.html" afterPath="$PROJECT_DIR$/doc/index-files/index-4.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-5.html" afterPath="$PROJECT_DIR$/doc/index-files/index-5.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-6.html" afterPath="$PROJECT_DIR$/doc/index-files/index-6.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-7.html" afterPath="$PROJECT_DIR$/doc/index-files/index-7.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-8.html" afterPath="$PROJECT_DIR$/doc/index-files/index-8.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index-files/index-9.html" afterPath="$PROJECT_DIR$/doc/index-files/index-9.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/overview-frame.html" afterPath="$PROJECT_DIR$/doc/overview-frame.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/overview-summary.html" afterPath="$PROJECT_DIR$/doc/overview-summary.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/overview-tree.html" afterPath="$PROJECT_DIR$/doc/overview-tree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/package-list" afterPath="$PROJECT_DIR$/doc/package-list" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/resources/inherit.gif" afterPath="$PROJECT_DIR$/doc/resources/inherit.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/serialized-form.html" afterPath="$PROJECT_DIR$/doc/serialized-form.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/stylesheet.css" afterPath="$PROJECT_DIR$/doc/stylesheet.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/AtmWithdrawalTransaction.html" afterPath="$PROJECT_DIR$/doc/transaction/AtmWithdrawalTransaction.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/CashPurchaseTransaction.html" afterPath="$PROJECT_DIR$/doc/transaction/CashPurchaseTransaction.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/ReconcilableTransaction.html" afterPath="$PROJECT_DIR$/doc/transaction/ReconcilableTransaction.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/ReconciliationTransaction.html" afterPath="$PROJECT_DIR$/doc/transaction/ReconciliationTransaction.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/TransactionType.html" afterPath="$PROJECT_DIR$/doc/transaction/TransactionType.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/package-frame.html" afterPath="$PROJECT_DIR$/doc/transaction/package-frame.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/package-summary.html" afterPath="$PROJECT_DIR$/doc/transaction/package-summary.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/doc/transaction/package-tree.html" afterPath="$PROJECT_DIR$/doc/transaction/package-tree.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/input/test" afterPath="$PROJECT_DIR$/input/test" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/input/test2.csv" afterPath="$PROJECT_DIR$/input/test2.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/exception/MalformedInputException.java" afterPath="$PROJECT_DIR$/src/main/java/exception/MalformedInputException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/exception/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/exception/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/execute/ReconcileCsv.java" afterPath="$PROJECT_DIR$/src/main/java/execute/ReconcileCsv.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/execute/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/execute/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/transaction/AtmWithdrawalTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/transaction/AtmWithdrawalTransaction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/transaction/CashPurchaseTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/transaction/CashPurchaseTransaction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/transaction/ReconcilableTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/transaction/ReconcilableTransaction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/transaction/ReconciliationTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/transaction/ReconciliationTransaction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/transaction/TransactionType.java" afterPath="$PROJECT_DIR$/src/main/java/transaction/TransactionType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/src/main/java/transaction/package-info.java" afterPath="$PROJECT_DIR$/src/main/java/transaction/package-info.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/csv/target/atm-reconcile.jar" afterPath="$PROJECT_DIR$/target/atm-reconcile.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atm-reconcile.iml" afterPath="$PROJECT_DIR$/atm-reconcile.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="atm-reconcile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,7 +21,7 @@
     <file path="/CashPurchaseTransaction.java" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361134289283" ignored="false" />
     <file path="/TransactionType.java" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361135298720" ignored="false" />
     <file path="/ReconcileCsv.java" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361156258546" ignored="false" />
-    <file path="/pom.xml" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361154745143" ignored="false" />
+    <file path="/pom.xml" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361158609613" ignored="false" />
     <file path="/package-info.java" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361155080701" ignored="false" />
     <file path="$PROJECT_DIR$/csv/doc/transaction/ReconcilableTransaction.html" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361155516952" ignored="false" />
     <file path="$PROJECT_DIR$/csv/doc/transaction/AtmWithdrawalTransaction.html" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361155516952" ignored="false" />
@@ -95,6 +33,8 @@
     <file path="$PROJECT_DIR$/csv/doc/index-files/index-8.html" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361155516952" ignored="false" />
     <file path="/MalformedInputException.java" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361155151598" ignored="false" />
     <file path="/Dummy.txt" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361157811960" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/compiler.xml" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361158613852" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="1673b85c-4bf9-489a-9da2-2819f2436d31" time="1361158620897" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +96,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="25" column="62" selection-start="947" selection-end="947" vertical-scroll-proportion="0.6097561">
               <folding />
             </state>
           </provider>
@@ -196,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/csv/src/main/java/ReconciliationTransaction.java" />
         <option value="$PROJECT_DIR$/csv/src/main/java/execution/ReconcileCsv.java" />
         <option value="$PROJECT_DIR$/csv/profiles.xml" />
         <option value="$PROJECT_DIR$/csv/src/main/java/execute/package-info.java" />
@@ -212,6 +151,7 @@
         <option value="$PROJECT_DIR$/csv/src/main/java/transaction/ReconciliationTransaction.java" />
         <option value="$PROJECT_DIR$/csv/src/main/java/transaction/ReconcilableTransaction.java" />
         <option value="$PROJECT_DIR$/atm-reconcile.iml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -237,10 +177,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Plugins" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="assembly" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -514,7 +450,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18638574" sideWeight="0.3277439" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28200972" sideWeight="0.3277439" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6722561" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="0" y="22" width="1280" height="774" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6722561" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="0" y="22" width="1280" height="774" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20183486" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -653,7 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="25" column="62" selection-start="947" selection-end="947" vertical-scroll-proportion="0.6097561">
           <folding />
         </state>
       </provider>

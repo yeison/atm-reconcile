@@ -10,7 +10,7 @@
 
 
     <build>
-        <finalName>atm-reconcile</finalName>
+
         <plugins>
 
             <plugin>
@@ -23,6 +23,7 @@
                         <goals><goal>single</goal></goals>
                         <configuration>
                             <finalName>atm-reconcile</finalName>
+                            <outputDirectory>${project.basedir}</outputDirectory>
                             <attach>false</attach>
                             <appendAssemblyId>false</appendAssemblyId>
                             <descriptors>
