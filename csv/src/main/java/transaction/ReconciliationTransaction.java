@@ -83,7 +83,7 @@ public class ReconciliationTransaction {
     }
 
     /**
-     * Provide a list of Cash and ATM transactions, which are meant to be reconciled accordingly.
+     * Accordingly reconcile a list of Cash and ATM transactions with one another.
      * ReconciliationTransaction objects will be created from the reconciliation events, and returned
      * as a new list.
      *
@@ -186,6 +186,10 @@ public class ReconciliationTransaction {
     }
 
     /* Getters and Setters */
+
+    /**
+     * Retrieve the cash transaction from this reconciliation event.
+     */
     public CashPurchaseTransaction getCashPurchaseTransaction() {
         return cashPurchaseTransaction;
     }
@@ -194,6 +198,9 @@ public class ReconciliationTransaction {
         this.cashPurchaseTransaction = cashPurchaseTransaction;
     }
 
+    /**
+     * Retrieve the atm transaction from this reconciliation event.
+     */
     public AtmWithdrawalTransaction getAtmWithdrawalTransaction() {
         return atmWithdrawalTransaction;
     }
@@ -202,6 +209,9 @@ public class ReconciliationTransaction {
         this.atmWithdrawalTransaction = atmWithdrawalTransaction;
     }
 
+    /**
+     * If this reconciliation event has a parent ATM transaction, retrieve this parent.
+     */
     public AtmWithdrawalTransaction getParent() {
         return parent;
     }
@@ -210,6 +220,9 @@ public class ReconciliationTransaction {
         this.parent = parent;
     }
 
+    /**
+     * Retrieve the dollar amount of this reconciliation event.
+     */
     public double getAmount() {
         return amount;
     }

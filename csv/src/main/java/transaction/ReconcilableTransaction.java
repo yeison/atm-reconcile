@@ -1,5 +1,7 @@
 package transaction;
 
+import exception.MalformedInputException;
+
 import java.io.IOException;
 import java.sql.Date;
 
@@ -56,28 +58,32 @@ public abstract class ReconcilableTransaction implements Comparable<Reconcilable
      * @return a ReconcilableTransaction object generated from input-line data
      * @throws IOException
      */
-    public static ReconcilableTransaction createFromInput(String line) throws IOException {
+    public static ReconcilableTransaction createTransactionsFromInput(String line) throws MalformedInputException {
 
-        String[] values = line.split(",");
+        try{
+            String[] values = line.split(",");
 
-        // Remove white spaces from fields
-        Long    id              = new Long(values[0]);
-        String  name            = values[1].replaceAll("\\s", "");
-        Double  amount          = new Double(values[2].replaceAll("\\s", ""));
-        String  dateString      = values[3].replaceAll("\\s", "");
-        boolean isCash          = Boolean.valueOf(values[4].replaceAll("\\s", ""));
-        boolean isAtm           = Boolean.valueOf(values[5].replaceAll("\\s", ""));
+            // Remove white spaces from fields
+            Long    id              = new Long(values[0]);
+            String  name            = values[1].replaceAll("\\s", "");
+            Double  amount          = new Double(values[2].replaceAll("\\s", ""));
+            String  dateString      = values[3].replaceAll("\\s", "");
+            boolean isCash          = Boolean.valueOf(values[4].replaceAll("\\s", ""));
+            boolean isAtm           = Boolean.valueOf(values[5].replaceAll("\\s", ""));
 
-        Date date = Date.valueOf(dateString);
+            Date date = Date.valueOf(dateString);
 
-        if(isAtm && !isCash){
-            return new AtmWithdrawalTransaction(id, name, amount, date);
+            if(isAtm && !isCash){
+                return new AtmWithdrawalTransaction(id, name, amount, date);
 
-        } else if (isCash){
-            return new CashPurchaseTransaction(id, name, amount, date);
+            } else if (isCash){
+                return new CashPurchaseTransaction(id, name, amount, date);
 
-        } else {
-            throw new IOException(String.format("Input type is ambiguous (atm/cash): %s", line));
+            } else {
+                throw new MalformedInputException(String.format("Input type is ambiguous (atm/cash): %s", line));
+            }
+        } catch (ArrayIndexOutOfBoundsException e){
+            throw new MalformedInputException(String.format("Input has malformed records/lines: %s", line));
         }
 
     }

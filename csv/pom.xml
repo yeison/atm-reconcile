@@ -9,31 +9,37 @@
     <version>1.0-SNAPSHOT</version>
 
 
-
     <build>
+        <finalName>atm-reconcile</finalName>
         <plugins>
+
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>execute.ReconcileCsv</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <version>2.2</version>
                 <executions>
                     <execution>
+                        <id>exe</id>
                         <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
+                        <goals><goal>single</goal></goals>
+                        <configuration>
+                            <finalName>atm-reconcile</finalName>
+                            <attach>false</attach>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>assembly.xml</descriptor>
+                            </descriptors>
+                            <archive>
+                                <manifest>
+                                    <mainClass>execute.ReconcileCsv</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
+
     </build>
     
 </project>

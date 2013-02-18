@@ -1,12 +1,13 @@
 package execute;
 
+import exception.MalformedInputException;
 import transaction.*;
 
 import java.io.*;
 import java.util.*;
 
 /**
- * This is the entry point for the csv-based record loading.  It reads the
+ * This is the entry point for the csv-based processing.  It reads the
  * transaction records from a csv file; creates the appropriate ReconcilableTransaction
  * objects from the csv data.  Then it uses these objects to perform the reconciliations.
  */
@@ -19,40 +20,48 @@ public class ReconcileCsv {
      */
     public static void main(String[] args){
 
+        // Provide some help/usage information
+        if(args.length == 0 || args[0].equals("-h")){
+            printHelpMessage();
+        }
+
         // LinkedList will perform better than ArrayList for our needs
-        LinkedList<ReconcilableTransaction> transactions;
+        LinkedList<ReconcilableTransaction> transactions = null;
 
         for(String fileName : args){
 
             try {
-                transactions = generateTransactionsFromInput(fileName);
+                transactions = generateTransactionsFromFile(fileName);
+
             } catch (IOException e){
                 // Alert of input-file error and continue to next file
-                System.err.println(String.format("Unable to process file: %s", fileName));
+                System.err.println(String.format("error: Unable to process file: %s", fileName));
                 e.printStackTrace();
                 continue;
             }
 
             // Perform reconciliation on the records
             LinkedList<ReconciliationTransaction> reconciliations
-                        = ReconciliationTransaction.reconcileTransactionList(transactions);
+                            = ReconciliationTransaction.reconcileTransactionList(transactions);
 
-            for(ReconciliationTransaction reconciliation: reconciliations){
-                System.out.println(reconciliation);
-            }
+            // Output to csv file
+            outputToCsv(reconciliations, fileName);
+
 
         }
 
     }
 
-
     /**
+     * Given a file name, this generates the appropriate CASH/ATM transaction objects from the
+     * records contained in that file.
      *
-     * @param fileName
-     * @return
+     * @param fileName the name of a file containing transaction records of the correct format.
+     * @return a list of the records loaded into transaction objects.
      * @throws IOException
      */
-    private static LinkedList<ReconcilableTransaction> generateTransactionsFromInput(String fileName) throws IOException{
+    private static LinkedList<ReconcilableTransaction> generateTransactionsFromFile(String fileName)
+            throws IOException {
 
         LinkedList<ReconcilableTransaction> transactions = new LinkedList<ReconcilableTransaction>();
 
@@ -67,14 +76,52 @@ public class ReconcileCsv {
 
         // Generate ReconcilableTransaction objects from csv records
         while ((line = bufferedReader.readLine()) != null) {
-
-            transactions.add(ReconcilableTransaction.createFromInput(line));
-
+            transactions.add(ReconcilableTransaction.createTransactionsFromInput(line));
         }
 
         bufferedReader.close();
 
         return transactions;
+    }
+
+    private static void outputToCsv(LinkedList<ReconciliationTransaction> reconciliations, String fileName) {
+
+        String outputDirectory = "output/";
+        // Get filename without path
+        File file = new File(fileName);
+        fileName = file.getName();
+
+        try {
+
+            new File(outputDirectory).mkdir();
+
+            FileWriter fileWriter = new FileWriter(outputDirectory + fileName.replaceAll(".csv", "") + ".reconciled.csv");
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+            for(ReconciliationTransaction reconciliation: reconciliations){
+                bufferedWriter.write(reconciliation.toString() + "\n");
+            }
+
+            bufferedWriter.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void printHelpMessage(){
+        System.out.println("" +
+                "\nThis program takes csv files containing Cash Purchase and ATM Withdrawal " +
+                "\ntransaction records.  Then it attempts to reconcile the cash transactions " +
+                "\nwith appropriate atm transactions.  The output is a list of reconciliation " +
+                "\ntransactions with their corresponding ATM parents." +
+                "\n" +
+                "\nProvide the names of properly formatted csv files as arguments.  " +
+                "\nOutput will be generated and placed in ./output" +
+                "\n\n\tUsage: " +
+                "\n\t\tjava -jar atm-reconcile.jar <input-file1.csv> ...\n");
+        System.exit(0);
     }
 
 
