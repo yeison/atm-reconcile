@@ -76,7 +76,7 @@ public abstract class ReconcilableTransaction implements Comparable<Reconcilable
             if(isAtm && !isCash){
                 return new AtmWithdrawalTransaction(id, name, amount, date);
 
-            } else if (isCash){
+            } else if (isCash && !isAtm){
                 return new CashPurchaseTransaction(id, name, amount, date);
 
             } else {

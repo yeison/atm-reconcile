@@ -176,10 +176,10 @@ public class ReconciliationTransaction {
     public String toString(){
 
         if(parent == null){
-            return String.format("%d,%s,null,%.0f",
+            return String.format("%d, %s, null, %.0f",
                 cashPurchaseTransaction.getId(), cashPurchaseTransaction.getTransactionName(), amount);
         } else {
-            return String.format("%d,%s,%d,%.0f",
+            return String.format("%d, %s, %d, %.0f",
                 cashPurchaseTransaction.getId(), cashPurchaseTransaction.getTransactionName(), parent.getId(), amount);
         }
 

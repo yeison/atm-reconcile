@@ -98,6 +98,8 @@ public class ReconcileCsv {
             FileWriter fileWriter = new FileWriter(outputDirectory + fileName.replaceAll(".csv", "") + ".reconciled.csv");
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
+            bufferedWriter.write("id, name, parent, amount\n");
+
             for(ReconciliationTransaction reconciliation: reconciliations){
                 bufferedWriter.write(reconciliation.toString() + "\n");
             }
