@@ -7,7 +7,7 @@ transactions with their corresponding ATM parents.
 
 requirements
 =============
-Java 1.6 
+Java 1.6  
 maven 3.0
 
 execution
