@@ -33,20 +33,19 @@ public class ReconcileCsv {
             try {
                 transactions = generateTransactionsFromFile(fileName);
 
+                // Perform reconciliation on the records
+                LinkedList<ReconciliationTransaction> reconciliations
+                            = ReconciliationTransaction.reconcileTransactionList(transactions);
+
+                // Output to csv file
+                outputToCsv(reconciliations, fileName);
+
             } catch (IOException e){
                 // Alert of input-file error and continue to next file
                 System.err.println(String.format("\nError: Unable to process file: %s", fileName));
                 e.printStackTrace();
                 continue;
             }
-
-            // Perform reconciliation on the records
-            LinkedList<ReconciliationTransaction> reconciliations
-                            = ReconciliationTransaction.reconcileTransactionList(transactions);
-
-            // Output to csv file
-            outputToCsv(reconciliations, fileName);
-
 
         }
 
@@ -64,39 +63,47 @@ public class ReconcileCsv {
             throws IOException {
 
         LinkedList<ReconcilableTransaction> transactions = new LinkedList<ReconcilableTransaction>();
+        BufferedReader bufferedReader = null;
 
-        File file = new File(fileName);
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+        // Try here just so we can add the finally and close the reader
+        try {
 
-        String line;
-        assert bufferedReader != null;
+            File file = new File(fileName);
+            bufferedReader = new BufferedReader(new FileReader(file));
 
-        // Skip the first line (header)
-        bufferedReader.readLine();
+            String line;
+            assert bufferedReader != null;
 
-        // Generate ReconcilableTransaction objects from csv records
-        while ((line = bufferedReader.readLine()) != null) {
-            transactions.add(ReconcilableTransaction.createTransactionsFromInput(line));
+            // Skip the first line (header)
+            bufferedReader.readLine();
+
+            // Generate ReconcilableTransaction objects from csv records
+            while ((line = bufferedReader.readLine()) != null) {
+                transactions.add(ReconcilableTransaction.createTransactionsFromInput(line));
+            }
+
+        } finally {
+            bufferedReader.close();
         }
-
-        bufferedReader.close();
 
         return transactions;
     }
 
-    private static void outputToCsv(LinkedList<ReconciliationTransaction> reconciliations, String fileName) {
+    private static void outputToCsv(LinkedList<ReconciliationTransaction> reconciliations, String fileName)
+            throws IOException {
 
-        String outputDirectory = "output/";
+        String outputDirectory = "output";
         // Get filename without path
         File file = new File(fileName);
         fileName = file.getName();
 
+        BufferedWriter bufferedWriter = null;
         try {
 
             new File(outputDirectory).mkdir();
 
             FileWriter fileWriter = new FileWriter(outputDirectory + fileName.replaceAll(".csv", "") + ".reconciled.csv");
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write("id, name, parent, amount\n");
 
@@ -108,6 +115,8 @@ public class ReconcileCsv {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            bufferedWriter.close();
         }
 
     }
