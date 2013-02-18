@@ -153,8 +153,10 @@ public class ReconciliationTransaction {
                 reconciliations.add(reconciliation);
 
             } else {
-                // We break if newest atm transaction is more recent than newest cash transaction
-                break;
+                // We pop the atm if newest atm transaction is more recent than newest cash transaction
+                // If we were receiving RT data, the implementation here would be very different
+                atmStack.pop();
+                continue;
             }
 
         }
