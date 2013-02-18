@@ -92,7 +92,7 @@ public class ReconcileCsv {
     private static void outputToCsv(LinkedList<ReconciliationTransaction> reconciliations, String fileName)
             throws IOException {
 
-        String outputDirectory = "output";
+        String outputDirectory = "output" + System.getProperty("file.separator");
         // Get filename without path
         File file = new File(fileName);
         fileName = file.getName();
