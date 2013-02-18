@@ -9,4 +9,4 @@ execution
 =============
 To run the program, first build the jar using the maven 'package' goal:
 
-      mvn package
+`mvn package`
