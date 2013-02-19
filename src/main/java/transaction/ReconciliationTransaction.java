@@ -104,7 +104,7 @@ public class ReconciliationTransaction {
         // Sort by ReconcilableTransaction.compareTo
         Collections.sort(transactions);
 
-        // After sorting, the older transactions should be at the bottom of the respective stacks
+        // After sorting, the older transactions should be placed at the bottom of the respective stacks
         for (ReconcilableTransaction transaction: transactions){
 
             if(transaction.getType() == TransactionType.ATM){
@@ -154,7 +154,7 @@ public class ReconciliationTransaction {
 
             } else {
                 // We pop the atm if newest atm transaction is more recent than newest cash transaction
-                // If we were receiving RT data, the implementation here would be very different
+                // If we were receiving Real-Time data, the implementation here would be more complex
                 atmStack.pop();
                 continue;
             }
